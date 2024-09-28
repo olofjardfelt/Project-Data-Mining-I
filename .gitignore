@@ -4,12 +4,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Data files
-*.csv
-*.xlsx
-*.json
-*.parquet
-
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
 

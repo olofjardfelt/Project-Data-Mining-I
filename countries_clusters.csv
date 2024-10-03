@@ -1,9 +1,9 @@
 country,Cluster
-Austria,0
+Austria,2
 Belgium,0
 Bulgaria,1
-Cyprus,2
-Czechia,0
+Cyprus,1
+Czechia,2
 Germany,0
 Denmark,0
 Spain,1
@@ -11,9 +11,9 @@ Estonia,0
 Finland,0
 France,0
 Greece,1
-Croatia,2
+Croatia,1
 Hungary,2
-Ireland,0
+Ireland,2
 Italy,1
 Lithuania,2
 Luxembourg,0
@@ -23,6 +23,6 @@ Netherlands,0
 Poland,2
 Portugal,1
 Romania,2
-Slovenia,0
+Slovenia,2
 Sweden,0
 Slovakia,2

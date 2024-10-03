@@ -1,0 +1,1 @@
+Jag gick in och ganska manuellt ändrade strukturen och header namn på datan här. Den är alltå inte identisk med datan i Project-Data-Mining-I\data

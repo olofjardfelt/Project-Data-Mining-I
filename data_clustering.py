@@ -9,7 +9,8 @@ features_df = pd.read_csv("data/feature_df.csv")# your dataframe here
 labels_df = pd.read_csv("data/label_df.csv")# your dataframe here
 
 # Drop the 'Country' column as it's categorical and not needed for clustering
-df_clustering = features_df.drop('country', axis=1)
+# Also drop the sunshine column as it's not needed for clustering
+df_clustering = features_df.drop(['country', 'annual_sunshine'], axis=1)
 
 # Standardize the data to ensure all features are on the same scale
 scaler = StandardScaler()
@@ -52,3 +53,8 @@ plt.savefig('Suicide_cluster.png')
 # Examine cluster characteristics
 cluster_centers = pd.DataFrame(kmeans.cluster_centers_, columns=df_clustering.columns)
 print(cluster_centers)
+
+# Save the countries and their cluster in a new df and save it to file
+countries_clusters_df = features_df[['country', 'Cluster']]
+countries_clusters_df.to_csv('countries_clusters.csv', index=False)
+print(countries_clusters_df)

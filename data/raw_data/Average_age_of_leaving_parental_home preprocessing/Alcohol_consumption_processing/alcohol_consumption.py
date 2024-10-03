@@ -19,10 +19,15 @@ df['freq_value'] = df['frequenc'].map(freq_mapping)
 df['adjusted_freq_value'] = df['freq_value'] * df['OBS_VALUE']
 
 # Group by country and aggregate the frequency values
-result = df.groupby('geo')['adjusted_freq_value'].mean().reset_index()
+result = df.groupby('geo')['adjusted_freq_value'].sum().reset_index()
 
 # Print the result
 print(result)
 
 #Save as new csv file
-result.to_csv("data/alcohol_consumption_processed.csv", index=False)
+result.to_csv("data/raw_data/alcohol_consumption_processed.csv", index=False)
+
+# Calculate the value for Finland taken from 2014 data
+Finland_val = 4*2.7 + 36.8*3 + 29.6*2 + 16.1*1
+
+print(Finland_val)

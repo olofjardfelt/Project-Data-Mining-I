@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Define the file names and the corresponding headers to extract
 files = [
     "EU2019_unemployment_rate.csv",
-    "EU2019_Annual_Sunshine.csv",
+    "EU2019_Alcohol_consumption.csv",
     "EU2019_avg_age_of_leaving_parental_home.csv",
     "EU2019_Gini_Index.csv",
     "EU2019_internet_usage.csv",

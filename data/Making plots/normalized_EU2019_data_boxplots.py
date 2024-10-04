@@ -5,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 # Define the file names and the corresponding headers to extract
 files = [
     "EU2019_unemployment_rate.csv",
-    "EU2019_Annual_Sunshine.csv",
+    "EU2019_Alcohol_consumption.csv",
     "EU2019_avg_age_of_leaving_parental_home.csv",
     "EU2019_Gini_Index.csv",
     "EU2019_internet_usage.csv",
@@ -15,7 +15,9 @@ files = [
 
 # Empty lists to store the normalized data and labels
 data = []
-labels = []
+# labels = []
+labels = ['Unemployment', 'Alcohol Consumption', 'Leaving parental home', 'Gini Index', 'Internet Usage', 'Religious Importance', 'Suicide mortality']
+
 
 # Initialize the MinMaxScaler
 scaler = MinMaxScaler()
@@ -24,7 +26,7 @@ scaler = MinMaxScaler()
 for file in files:
     df = pd.read_csv(file)
     # Get the label from the second header of each file
-    labels.append(df.columns[1])
+    # labels.append(df.columns[1]) (ANVÄND DETTA FÖR AUTOMATISK LABEL SKAPANDE)
     # Extract the second column values, reshape for scaling, and normalize using MinMaxScaler
     values = df.iloc[:, 1].dropna().values.reshape(-1, 1)
     normalized_values = scaler.fit_transform(values).flatten()  # Normalize and flatten to 1D array

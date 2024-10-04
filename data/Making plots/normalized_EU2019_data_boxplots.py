@@ -10,13 +10,14 @@ files = [
     "EU2019_Gini_Index.csv",
     "EU2019_internet_usage.csv",
     "EU2019_religion_importance_weighted_scores.csv",
+    "EU2019_Annual_Sunshine.csv",
     "EU2019_suicide_rates.csv"
 ]
 
 # Empty lists to store the normalized data and labels
 data = []
 # labels = []
-labels = ['Unemployment', 'Alcohol Consumption', 'Leaving parental home', 'Gini Index', 'Internet Usage', 'Religious Importance', 'Suicide mortality']
+labels = ['Unemployment', 'Alcohol Consumption', 'Leaving parental home', 'Gini Index', 'Internet Usage', 'Religious Importance', 'Annual Sunshine', 'Suicide mortality']
 
 
 # Initialize the MinMaxScaler
